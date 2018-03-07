@@ -1,4 +1,4 @@
-from django.http import JsonResponse, HttpResponseForbidden
+from django.http import JsonResponse, HttpResponseNotAllowed
 
 # echo message api
 def echo_message(request):
@@ -6,5 +6,5 @@ def echo_message(request):
         msg = request.GET.get('msg', '')
         return JsonResponse({'msg': msg})
     else:
-        return HttpResponseForbidden()
+        return HttpResponseNotAllowed(['GET'])
 

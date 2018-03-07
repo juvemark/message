@@ -28,5 +28,6 @@ class TestEcho(TestCase):
     def test_echo_message_post_fobbidden(self):
         '''without msg parameters'''
         response = self.client.post(self.url, data={'msg': 'hello world'})
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 405)
+        print(response)
 
