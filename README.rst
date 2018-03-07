@@ -106,5 +106,10 @@ See detailed `cookiecutter-django Docker documentation`_.
 
 .. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
 
+Run echo message api Test
+^^^^^^
+Open console and switch to the project folder, the run the command below:
+docker-compose -f local.yml run django python manage.py test api.tests
+
 
 
